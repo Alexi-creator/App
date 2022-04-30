@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react'
 
-import { Preloader } from '../../assets/images/Preloader'
-
-export const withSuspense = (Component: any, Loader: React.FC = Preloader) => {
+export const withSuspense = (Component: any, Loader: React.FC) => {
   return (props: any) => {
     return (
       <Suspense fallback={<Loader />}>
