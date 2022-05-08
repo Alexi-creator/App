@@ -1,0 +1,16 @@
+.root {
+    padding: 0 12px;
+}
+
+.link {
+    color: #000;
+    transition: all .3s;
+
+    &:hover {
+        color: cadetblue;
+    }
+}
+
+.linkActive {
+    color: cadetblue;
+}

@@ -10,11 +10,13 @@ export const Layout: React.FC = () => {
 
   return (
     <div className={styles.root}>
-      <Header />
-
-      <Sidebar />
-      
-      <main>
+      <header className={styles.header}>
+        <Header />
+      </header>
+      <nav className={styles.sidebar}>
+        <Sidebar />
+      </nav>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </div>

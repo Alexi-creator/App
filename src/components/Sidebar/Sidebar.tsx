@@ -7,14 +7,11 @@ export const Sidebar: React.FC = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.logo}>
-        logo
+      <div className={styles.row}>
+        <NavLink className={({isActive}) => isActive ? styles.linkActive : styles.link} to='/'>Home</NavLink>
       </div>
-      <div className={styles.link}>
-        <NavLink to='/'>Home</NavLink>
-      </div>
-      <div className={styles.link}>
-        <NavLink to='/cartoons'>Cartoons</NavLink>
+      <div className={styles.row}>
+        <NavLink className={({isActive}) => isActive ? styles.linkActive : styles.link} to='/cartoons'>Cartoons</NavLink>
       </div>
     </div>
   )

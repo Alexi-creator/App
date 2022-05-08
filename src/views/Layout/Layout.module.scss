@@ -1,0 +1,18 @@
+.root {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 10px;
+}
+
+.header {
+    grid-column: span 2;
+    border: 1px solid red;
+}
+
+.main {
+    border: 1px solid darkgrey;
+    padding: 20px;
+}
+
+
+
