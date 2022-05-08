@@ -4,8 +4,8 @@ import styles from './Header.module.scss'
 
 export const Header = () => {
   return (
-    <div className={styles.root}>
+    <header className={styles.root}>
       Header
-    </div>
+    </header>
   )
 }
