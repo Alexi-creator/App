@@ -14,27 +14,40 @@ export const CartoonsPage: React.FC = () => {
   }, [])
 
   const sort = (value: string) => {
-    if (value === 'date') {
-      setState(state.reduce((acc, item) => {
-
-      }, []))
+    if (value === 'mindate') {
+      setState([...state].sort((a, b): any => `${a.year > b.year ?  1 : -1}`))
+      return
+    }
+    if (value === 'maxdate') {
+      setState([...state].sort((a, b): any => `${a.year > b.year ?  -1 : 1}`))
+      return
+    }
+    if (value === 'countEpisodes') {
+      setState([...state].sort((a, b): any => `${a.episodes > b.episodes ?  1 : -1}`))
+      return
     }
   }
 
   return (
     <div className={styles.root}>
-      <div className={styles.title}>page about cartoons</div>
+      <div className={styles.title}>page about popular cartoons</div>
 
-      <select onChange={(e) => sort(e.target.value)}>
-        <option value="date">date</option>
-        <option value="countEpisodes">countEpisodes</option>
-      </select>
+      <div className={styles.select}>
+        <select onChange={(e) => sort(e.target.value)}>
+          <option value="choose">choose</option>
+          <option value="mindate">min date</option>
+          <option value="maxdate">max date</option>
+          <option value="countEpisodes">count episodes</option>
+        </select>
+      </div>
 
-      {state.map(item => (
-        <div key={item.id}>
-          <Cartoons {...item} />
-        </div>
-      ))}
+      <div className={styles.grid}>
+        {state.map(item => (
+          <div key={item.id}>
+            <Cartoons {...item} />
+          </div>
+        ))}
+      </div>
 
     </div>
   )
