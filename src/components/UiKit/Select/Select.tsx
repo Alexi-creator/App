@@ -6,7 +6,7 @@ export const Select: React.FC = () => {
 
   return (
     <div className={styles.root}>
-
+      select
     </div>
   )
 }

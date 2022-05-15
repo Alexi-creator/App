@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { Cartoons } from '../../components/Cartoons'
+import { Select } from '../../components/UiKit/Select'
 import styles from './CartoonsPage.module.scss'
 
 export const CartoonsPage: React.FC = () => {
@@ -39,6 +40,7 @@ export const CartoonsPage: React.FC = () => {
           <option value="maxdate">max date</option>
           <option value="countEpisodes">count episodes</option>
         </select>
+        <Select />
       </div>
 
       <div className={styles.grid}>
